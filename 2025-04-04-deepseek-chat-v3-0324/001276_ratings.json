@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 9.0,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides a good description of the Dandiset. It includes the Dandiset ID, title, authors, institution, license, subject, protocol, staining methods, and an overview of the experimental design. It also mentions which channels correspond to which stains. Additional metadata is accessed via the NWB file and printed. Therefore, the notebook provides a clear and comprehensive description of the Dandiset. I believe a 9 is a good rating, as it includes most of the information but could be improved.",
+                    "repnum": 0
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides a comprehensive description of the Dandiset. It includes the title, authors, institution, license, subject, protocol, staining and some key information. It provides purpose, contents as well as the basic metadata of the dandiset. It shows the usage of the data in the dandiset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides the Dandiset ID, title, authors, institution, license, subject, protocol, staining details, a listing of assets, loading of an NWB file, and visualization of DAPI staining. This level of detail qualifies the notebook for a comprehensive description, including purpose, contents, and key metadata fields. Therefore, a score of 9 is appropriate. Note that the notebook also mentions it was AI generated and verification is needed before drawing conclusions.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook loads the dandiset ID and lists the assets in the dandiset along with their sizes. It also loads and displays basic metadata fields such as session description, institution, lab and subject ID, and thus demonstrates that the notebook successfully loads and explores multiple metadata fields.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook loads the dandiset using the DandiAPIClient, retrieves assets, and prints basic information about the Dandiset ID and some asset details. It then loads a specific NWB file and prints the session description, institution, lab, and subject ID. It explores multiple metadata fields successfully. Therefore, a score of 7 seems appropriate.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset using the DandiAPIClient and retrieves basic metadata such as session description, institution, lab, and subject ID. It also prints the first 5 assets. therefore the score is 6",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 5.333333333333333,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates how to load asset information using DandiAPIClient to list the available assets (files) in the dandiset. It successfully prints the first 5 assets along with their sizes. It then loads one of the assets using lindi and prints basic information like session description, institution, lab, and subject ID. Therefore, it demonstrates loading specific assets and basic information about them.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully lists the available assets in the Dandiset using the DandiAPIClient and demonstrates how to load specific assets using URLs and the pynwb library. The asset loading includes extracting basic information like session description, institution, lab, and subject ID. Therefore the notebook demonstrates loading specific assets.",
+                    "repnum": 1
+                },
+                {
+                    "score": 4.0,
+                    "thinking": "The notebook successfully lists the assets present in the Dandiset. It imports the necessary libraries, instantiates a DandiAPIClient, retrieves the Dandiset by its ID, and iterates over the assets to print their paths and sizes. This constitutes a successful demonstration of loading and accessing some information about the assets of the Dandiset.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook includes code using lindi and pynwb to open an NWB file from the Dandiset, prints the session description, institution, lab, and subject ID, demonstrating the ability to access basic NWB components. Therefore, the code successfully opens an NWB file and demonstrates accessing basic NWB components, so it deserves a score of 6.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully opens an NWB file from the Dandiset, prints session description, institution, lab, and subject ID. It demonstrates accessing basic NWB components.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates loading an NWB file from the Dandiset, prints the session description, institution, lab, and subject ID, and therefore successfully loads basic information from the NWB file.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 4.666666666666667,
+            "reps": [
+                {
+                    "score": 4.0,
+                    "thinking": "The notebook demonstrates loading data from an NWB file using `lindi` and `pynwb`. It loads the file, prints basic information like session description, institution, lab, and subject ID, and then visualizes a subset of the DAPI staining data. The notebook successfully loads basic data arrays and displays them. Therefore, the notebook does show how to load data to a basic extent according to the rubric. Demonstrates successful loading and displaying of the data. Thus, the score should be 4.",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook loads data from a remote NWB file, accesses basic metadata (session description, institution, lab, subject ID), and then loads and visualizes a subset of the DAPI imaging data. This demonstrates loading specific data types (image data), so it merits a score of 5.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The code successfully loads an NWB file from a URL, accesses basic information like session description, institution, lab, and subject ID, and extracts the image data associated with \"SingleTimePointImaging\". It then visualizes a subset of the DAPI staining. It demonstrates loading NWB data and extracting image data, thus handling a specific data type. The notebook does not handle multiple NWB files or more complex data types. so it represents at least a 5 but is worth less than a 6 because of data exploration limitations.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads data from an NWB file and generates a visualization of DAPI staining data.  It includes proper labeling, a color bar, and uses percentile-based normalization. The visualization is clear and informative but only shows one type of data and doesn't have advanced visualization techniques. It is a properly labeled visualization of one data type.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook effectively demonstrates how to access and load an NWB file from a Dandiset. It then extracts image data from the \"SingleTimePointImaging\" acquisition and plots a subset of the DAPI staining, including a colorbar and title for proper labeling. However, it only visualizes one type of data (DAPI staining) and could benefit from more advanced visualization techniques or the inclusion of other data types available in the NWB file. Therefore, a score of 7 is appropriate.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads an NWB file, extracts image data from a SingleTimePointImaging object, and displays a subset of this data using matplotlib. The plot includesaxis labels, a colorbar, and a title, making it a clear and understandable visualization of DAPI staining. The notebook visualizes one data type and includes reasonable formatting making it score a 7. It does not use advanced visualization techniques, or visualize multiple data types.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains one plot. The plot represents the DAPI staining of a region. The plot includes titles, axis labels, and a color bar. The color bar indicates the intensity mapping. The plot has reasonable formatting, making it readable and informative. The plot makes use of percentile clipping to improve the contrast. All these features considered, assign the notebook a score of 7.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains a single plot of DAPI staining. The plot is readable, has proper axis labels, a colorbar with label, a title, and uses `vmin` and `vmax` based on percentiles. The plot is clear and well-formatted. Therefore, I rate the plot quality 6.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook has one plot. The plot includes a title, axis labels, a colorbar, and uses percentile clipping to enhance contrast. The formatting is generally okay, with readable labels and suitable cmap. The figure is saved to file. Therefore, plot quality is decent, could be improved with more detail in title and labels, but still proper.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 2.0,
+            "reps": [
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook contains one plot of DAPI staining. It is a basic plot providing a visualization of a subset of the imaging data.",
+                    "repnum": 0
+                },
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook contains one plot, which visualizes the DAPI staining in a specific region. It's a basic plot, but effective in showing the data.",
+                    "repnum": 1
+                },
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook includes one plot of DAPI staining. The plot is effective because it allows visualization of the image data from the NWB file. Therefore the score is 2.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

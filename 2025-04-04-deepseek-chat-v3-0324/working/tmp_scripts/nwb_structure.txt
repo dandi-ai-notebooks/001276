@@ -1,0 +1,78 @@
+=== Captured NWB Structure ===
+root pynwb.file.NWBFile at 0x140547982908240
+Fields:
+  acquisition: {
+    SingleTimePointImaging <class 'pynwb.image.ImageSeries'>
+  }
+  experimenter: ['Giedre Silkuniene, Mantas Silkunas']
+  file_create_date: [datetime.datetime(2024, 12, 12, 14, 41, 58, 197275, tzinfo=tzoffset(None, -18000))]
+  identifier: 441cb2b5-170d-4539-8f1f-731a5d1b3759
+  institution: Old Dominion University
+  lab: Pakhomov Lab
+  session_description: Acquisition Description (Subject-Specific): Subject ID: P1_20240627_A2, Fluorescent Channel: DAPI, Phase: pre (where 'pre' indicates imaging prior to exposure and 'post' indicates imaging of the same well after exposure).  CanCan protocol (with canceling pulses),011: Protocol consisted of 9 packets of pulses delivered at 0.2MHz frequency, protocol repeated 2 times at 1Hz frequency. General Protocol Description (Subject-Independent): Experiments were conducted using a four-electrode stainless steel setup with an inter-electrode distance of 10.0 mm. The CanCan exposure protocol involved delivering packets of 600 ns pulses from four electrodes. Initially, a single 600 ns pulse (7.2 kV) was applied from one electrode (e.g., electrode 1), constituting phase 1. Subsequently, simultaneous 600 ns pulses with an amplitude reduced by 12.5% were delivered from two electrodes (e.g., electrodes 2 and 4), followed by another set of simultaneous pulses with an additional 12.5% amplitude reduction from electrodes 1 and 3. These simultaneous pulses represented phases 2, 3, and continued up to phase 8, with the amplitude reduced by 12.5% at each phase. After completing one packet of pulses, the sequence was repeated 9 times at a defined frequency. Upon completing these 9 repetitions, the protocol was either repeated 2, 4, or 6 times at a 1 Hz frequency or initiated anew from another electrode (e.g., electrode 2), ensuring that all four electrodes eventually served as the initiating electrode.Control protocols followed identical frequency and repetition schemes but lacked the subsequent, reduced-amplitude pulses delivered from the other electrodes. Before exposure, the growth medium was replaced with a physiological solution (in mM: 140 NaCl, 5.4 KCl, 2 CaCl2, 1.5 MgCl2, 10 D-glucose, and 10 HEPES; pH 7.3, 290–300 mOsm/kg) containing 1 µg/mL Hoechst and 1 µM YoPro-1 (YP). Hoechst, visualized via the DAPI channel, stained the nuclei of all cells. YP, visualized via the FITC channel, served as a semi-quantitative marker of membrane permeabilization induced by electroporation, as it has limited permeability into intact cells. Thirty minutes post-exposure, the dye-containing solution was replaced with dye-free physiological solution, and the monolayer was imaged to assess YP uptake.  OME metadata: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OME xmlns="http://www.openmicroscopy.org/Schemas/OME/2015-01" xmlns:OME="http://www.openmicroscopy.org/Schemas/OME/2015-01" xmlns:ROI="http://www.openmicroscopy.org/Schemas/ROI/2015-01" xmlns:BIN="http://www.openmicroscopy.org/Schemas/BinaryFile/2015-01" xmlns:SA="http://www.openmicroscopy.org/Schemas/SA/2015-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openmicroscopy.org/Schemas/OME/2015-01 http://www.openmicroscopy.org/Schemas/OME/2015-01/ome.xsd" Creator="HP Inc., XV - (4.1)">
+	<OME:Experimenter ID="Experimenter:0" UserName="OlympusIX83"/>
+	<OME:Instrument ID="Instrument:0">
+		<OME:Microscope Manufacturer="Olympus" Model="IX83 P2ZF"/>
+		<OME:LightSource Manufacturer="Olympus" Model="IX3 LED" ID="LightSource:0">
+			<OME:GenericExcitationSource/>
+		</OME:LightSource>
+		<OME:Detector Manufacturer="Hamamatsu" Model="Hamamatsu ORCA-Flash4.0" Gain="0" Offset="0" Zoom="1" ID="Detector:0"/>
+		<OME:Objective Manufacturer="Olympus" Model="IX3 Nosepiece" LensNA="0.16" NominalMagnification="4" CalibratedMagnification="4" WorkingDistance="13000" WorkingDistanceUnit="µm" ID="Objective:0"/>
+	</OME:Instrument>
+	<OME:Image ID="Image:0" Name="DAPI">
+		<OME:AcquisitionDate>2024-06-27T18:12:27Z</OME:AcquisitionDate>
+		<OME:ExperimenterRef ID="Experimenter:0"/>
+		<OME:InstrumentRef ID="Instrument:0"/>
+		<OME:ObjectiveSettings ID="Objective:0" Medium="Air" RefractiveIndex="1"/>
+		<OME:Pixels ID="Pixels:0" DimensionOrder="XYCZT" Type="uint16" SignificantBits="13" Interleaved="false" SizeX="19190" SizeY="19190" SizeC="1" SizeZ="1" SizeT="1" PhysicalSizeX="1.6250000000000002" PhysicalSizeXUnit="µm" PhysicalSizeY="1.6250000000000002" PhysicalSizeYUnit="µm">
+			<OME:Channel ID="Channel:0" Name="DAPI" SamplesPerPixel="1" ContrastMethod="Fluorescence" EmissionWavelength="455" EmissionWavelengthUnit="nm" Color="65535">
+				<LightSourceSettings ID="LightSource:0"/>
+				<DetectorSettings ID="Detector:0" Binning="1x1"/>
+			</OME:Channel>
+			<OME:TiffData IFD="0" FirstZ="0" FirstT="0" FirstC="0" PlaneCount="1"/>
+			<OME:Plane TheZ="0" TheT="0" TheC="0" DeltaT="218.24000000000001" DeltaTUnit="s" PositionZ="6652.5100000000002" PositionZUnit="µm" PositionX="59255.531106488983" PositionXUnit="µm" PositionY="19879.826007724529" PositionYUnit="µm" ExposureTime="600" ExposureTimeUnit="ms"/>
+		</OME:Pixels>
+	</OME:Image>
+	<SA:StructuredAnnotations/>
+</OME>
+  session_id: single_time_point
+  session_start_time: 2024-12-12 14:41:58.197201-05:00
+  subject: subject pynwb.file.Subject at 0x140547983173264
+Fields:
+  age: P1D
+  age__reference: birth
+  description: Acquisition Description (Subject-Specific): Subject ID: P1_20240627_A2, Fluorescent Channel: DAPI, Phase: pre (where 'pre' indicates imaging prior to exposure and 'post' indicates imaging of the same well after exposure).  CanCan protocol (with canceling pulses),011: Protocol consisted of 9 packets of pulses delivered at 0.2MHz frequency, protocol repeated 2 times at 1Hz frequency. General Protocol Description (Subject-Independent): Experiments were conducted using a four-electrode stainless steel setup with an inter-electrode distance of 10.0 mm. The CanCan exposure protocol involved delivering packets of 600 ns pulses from four electrodes. Initially, a single 600 ns pulse (7.2 kV) was applied from one electrode (e.g., electrode 1), constituting phase 1. Subsequently, simultaneous 600 ns pulses with an amplitude reduced by 12.5% were delivered from two electrodes (e.g., electrodes 2 and 4), followed by another set of simultaneous pulses with an additional 12.5% amplitude reduction from electrodes 1 and 3. These simultaneous pulses represented phases 2, 3, and continued up to phase 8, with the amplitude reduced by 12.5% at each phase. After completing one packet of pulses, the sequence was repeated 9 times at a defined frequency. Upon completing these 9 repetitions, the protocol was either repeated 2, 4, or 6 times at a 1 Hz frequency or initiated anew from another electrode (e.g., electrode 2), ensuring that all four electrodes eventually served as the initiating electrode.Control protocols followed identical frequency and repetition schemes but lacked the subsequent, reduced-amplitude pulses delivered from the other electrodes. Before exposure, the growth medium was replaced with a physiological solution (in mM: 140 NaCl, 5.4 KCl, 2 CaCl2, 1.5 MgCl2, 10 D-glucose, and 10 HEPES; pH 7.3, 290–300 mOsm/kg) containing 1 µg/mL Hoechst and 1 µM YoPro-1 (YP). Hoechst, visualized via the DAPI channel, stained the nuclei of all cells. YP, visualized via the FITC channel, served as a semi-quantitative marker of membrane permeabilization induced by electroporation, as it has limited permeability into intact cells. Thirty minutes post-exposure, the dye-containing solution was replaced with dye-free physiological solution, and the monolayer was imaged to assess YP uptake.  OME metadata: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OME xmlns="http://www.openmicroscopy.org/Schemas/OME/2015-01" xmlns:OME="http://www.openmicroscopy.org/Schemas/OME/2015-01" xmlns:ROI="http://www.openmicroscopy.org/Schemas/ROI/2015-01" xmlns:BIN="http://www.openmicroscopy.org/Schemas/BinaryFile/2015-01" xmlns:SA="http://www.openmicroscopy.org/Schemas/SA/2015-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openmicroscopy.org/Schemas/OME/2015-01 http://www.openmicroscopy.org/Schemas/OME/2015-01/ome.xsd" Creator="HP Inc., XV - (4.1)">
+	<OME:Experimenter ID="Experimenter:0" UserName="OlympusIX83"/>
+	<OME:Instrument ID="Instrument:0">
+		<OME:Microscope Manufacturer="Olympus" Model="IX83 P2ZF"/>
+		<OME:LightSource Manufacturer="Olympus" Model="IX3 LED" ID="LightSource:0">
+			<OME:GenericExcitationSource/>
+		</OME:LightSource>
+		<OME:Detector Manufacturer="Hamamatsu" Model="Hamamatsu ORCA-Flash4.0" Gain="0" Offset="0" Zoom="1" ID="Detector:0"/>
+		<OME:Objective Manufacturer="Olympus" Model="IX3 Nosepiece" LensNA="0.16" NominalMagnification="4" CalibratedMagnification="4" WorkingDistance="13000" WorkingDistanceUnit="µm" ID="Objective:0"/>
+	</OME:Instrument>
+	<OME:Image ID="Image:0" Name="DAPI">
+		<OME:AcquisitionDate>2024-06-27T18:12:27Z</OME:AcquisitionDate>
+		<OME:ExperimenterRef ID="Experimenter:0"/>
+		<OME:InstrumentRef ID="Instrument:0"/>
+		<OME:ObjectiveSettings ID="Objective:0" Medium="Air" RefractiveIndex="1"/>
+		<OME:Pixels ID="Pixels:0" DimensionOrder="XYCZT" Type="uint16" SignificantBits="13" Interleaved="false" SizeX="19190" SizeY="19190" SizeC="1" SizeZ="1" SizeT="1" PhysicalSizeX="1.6250000000000002" PhysicalSizeXUnit="µm" PhysicalSizeY="1.6250000000000002" PhysicalSizeYUnit="µm">
+			<OME:Channel ID="Channel:0" Name="DAPI" SamplesPerPixel="1" ContrastMethod="Fluorescence" EmissionWavelength="455" EmissionWavelengthUnit="nm" Color="65535">
+				<LightSourceSettings ID="LightSource:0"/>
+				<DetectorSettings ID="Detector:0" Binning="1x1"/>
+			</OME:Channel>
+			<OME:TiffData IFD="0" FirstZ="0" FirstT="0" FirstC="0" PlaneCount="1"/>
+			<OME:Plane TheZ="0" TheT="0" TheC="0" DeltaT="218.24000000000001" DeltaTUnit="s" PositionZ="6652.5100000000002" PositionZUnit="µm" PositionX="59255.531106488983" PositionXUnit="µm" PositionY="19879.826007724529" PositionYUnit="µm" ExposureTime="600" ExposureTimeUnit="ms"/>
+		</OME:Pixels>
+	</OME:Image>
+	<SA:StructuredAnnotations/>
+</OME>
+  sex: U
+  species: http://purl.obolibrary.org/obo/NCBITaxon_10090
+  strain: cellline: CT26
+  subject_id: P1_20240627_A2
+
+  timestamps_reference_time: 2024-12-12 14:41:58.197201-05:00
+

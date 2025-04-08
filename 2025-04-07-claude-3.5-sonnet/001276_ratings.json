@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 9.0,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides the DANDIset ID (001276), title derived from the description (\"Remote Targeting Electroporation Dataset\"), a description of the experimental purpose, the contents (microscopy data, fluorescent markers), and some basic metadata (electrode distance, pulse duration, protocol, repetition).  Data organization is implied but not explicitly stated (pre/post exposure images, subject IDs). The level of detail is fairly strong.",
+                    "repnum": 0
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides the Dandiset ID (\"001276\") and a title derived from the dataset's content. It then describes the dataset's purpose, what the dataset contains (microscopy data, cell monolayers, electroporation protocols, fluorescent markers), and some key metadata like inter-electrode distance, pulse duration, protocol specifics, and the markers used and their purpose. It also describes the Dandiset contents and data organization by listing asset paths and then showing how to access the \"SingleTimePointImaging\" data. It provides a fairly comprehensive description of the Dandiset, so it deserves a high score.",
+                    "repnum": 1
+                },
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides a good description of the Dandiset.\nIt includes the Dandiset ID, title, purpose of the experiment, and contents (microscopy data, fluorescent markers).\nIt also includes basic metadata such as inter-electrode distance, pulse duration, protocol, and protocol repetition.\nThe data organization can be inferred from the example asset paths.\nThe notebook also discusses the key observations of DAPI and YoPro-1 channels, that can be considered as basic metadata.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook retrieves dandiset id and shows number of assets, as well as example asset paths. The dandiset object is loaded via client.get_dandiset. The code executes without errors and presents enough information to be considered as loading basic metadata fields.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook loads the Dandiset ID and retrieves assets. It then loads specific assets and prints the subject ID and session description which are metadata fields related to dandiset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook uses the DandiAPIClient to get the dandiset based on its ID. Then accesses some preliminary metadata like the number of assets. After that it specifically loads the two nwb files from the dandiset and shows the subject ID (basic metadata) and session description (more substantial metadata).\n\nScore breakdown:\n1. DandiAPIClient usage: Shows loading.\n2. Asset count: Basic metadata.\n3. Subject ID: Basic.\n4. Session Description: Larger descriptive field.\n\nTherefore, level 6 is appropriate.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully lists the assets of the DANDI set using the DandiAPIClient. The code runs without errors. Furthermore, it proceeds to load specific assets (pre and post exposure images) using URLs and the lindi library. The notebook prints some basic metadata of the loaded objects.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates how to list the assets with DandiAPIClient and how to load specific assets by their URL from lindi. It also prints basic metadata of the loaded asset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads and lists the assets of the Dandiset using the DANDI API. It also loads specific assets (pre- and post-exposure images) and accesses their metadata (subject ID, image dimensions, session description). Therefore, a score of 6 is appropriate.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads NWB files using pynwb and lindi and displays metadata. It accesses image data and presents basic statistics. The notebook then successfully visualizes a part of the image data. The notebook demonstrates accessing basic NWB components through acquisition data, so it gets a 6.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates successful loading of NWB files using pynwb and lindi. It then accesses basic metadata such as subject ID, image dimensions, and session description, showing a good grasp of basic NWB components. Therefore it is a 6.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads two different NWB files from the Dandiset. It then demonstrates accessing basic metadata such as subject ID, image dimensions, and session description. This demonstrates accessing basic NWB components but not necessarily exploring multiple NWB data structures in great detail.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads data from the NWB files using pynwb and lindi, accessing image data. It also prints metadata. The notebook demonstrates loading of image data and reading basic metadata. The process for loading is demonstrated and the data is presented. However, it only focuses on image data, and could expand on demonstrating other potential data types that could be included in a NWB file.\n\nScore: 6",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads NWB files from the Dandiset using lindi and pynwb (score >= 4). It loads specific image data (SingleTimePointImaging), which is a specific data type (score >= 5). It loads both pre-exposure and post-exposure images, demonstrating access to multiple data elements (score >= 6). The code uses the LindiH5pyFile class and pynwb.NWBHDF5IO correctly, indicating appropriate handling of data types (score >= 7). It explores the image data and prints statistics (mean, median, min/max, std), exploring complex data (score >= 8). It does not make use of advanced indexing but uses basic slicing to access the data. Therefore the score is 8.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads data from NWB files using `pynwb` and `lindi`. It loads both 'pre' and 'post' exposure image data and prints basic metadata such as subject ID, image dimensions, and session description. It then accesses the image data arrays and visualizes a subset of the images. This demonstrates loading specific data types (image data) and accessing multiple data elements. The use of `lindi` indicates an understanding of how to handle potentially large datasets stored in the cloud. However, it primarily focuses on image data and doesn't demonstrate loading or handling other potential data types within the NWB file, such as timeseries or behavioral data. Therefore, the score should be a reasonably high one.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 6.333333333333333,
+            "reps": [
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook loads pre and post exposure images from the NWB files and visualizes them side by side. The plots have titles, labels for the axes, and colorbars. The code successfully loads and plots the data. This demonstrates basic visualizations with some formatting. Therefore, the notebook scores a 5.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook loads pre-exposure and post-exposure images from NWB files in the Dandiset and visualizes a central subsection of both sets of image data using `matplotlib`. The visualizations are labeled with titles, axis labels, and a colorbar. The code extracts a subset of the image to make a smaller image for visualization. The notebook could be improved by showing more visualization types, and possibly by selecting a more pertinent subsection of the images.  Overall, the notebook creates clear visualizations with proper labeling. The image visualization is done well. The notebook provides an overview for the user of the dataset and relevant code is present to load the data and present it as an image the user can understand. The user can modify parameters in the code to create different visuals if they see fit.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook loads image data from NWB files and generates a visualization of pre- and post-exposure images, including labels and a colorbar. Statistics about the intensities are also printed. However, the visualization is fairly basic. It extracts a centered subset for visualization, which is appropriate given the size of the data. Although basic, it succeeds in showing the visualization of data from the NWB file.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains two well-labeled plots showing the pre and post exposure image data for different channels. The plots include colorbars, intensity labels, axis labels, and titles, making the information presented clear and interpretable. The image statistics corroborate the visual observations, noting that the YoPro-1 channel has a more restricted intensity range compared to the DAPI channel.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook generates plots showing pre- and post-exposure microscopy images. The plots are readable, have colorbars, titles, and labels for the axes. The formatting is appropriate for understanding the data.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook contains two subplots, one for the pre-exposure DAPI channel and another for the post-exposure YoPro-1 channel. The plots are readable and have basic labels for the axes, title, and colorbar. The formatting is adequate, but there is room for improvement, such as optimizing the colorbar labels and adjusting the subplot spacing.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 3.0,
+            "reps": [
+                {
+                    "score": 4.0,
+                    "thinking": "The notebook contains one plot with two subplots showing the pre-exposure (DAPI) and post-exposure (YoPro-1) images. These plots effectively visualize the cell staining patterns and membrane permeabilization, providing different aspects of the data. Hence the score is 4.",
+                    "repnum": 0
+                },
+                {
+                    "score": 3.0,
+                    "thinking": "The notebook includes one plot with two subplots which visualizes pre and post exposure image data. Therefore, the notebook includes two basic plots.",
+                    "repnum": 1
+                },
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook contains one effective plot which displays pre-exposure and post-exposure images side by side, enabling visual comparison of the two channels. This warrants a score of 2.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

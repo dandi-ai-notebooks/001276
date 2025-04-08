@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 9.0,
+            "reps": [
+                {
+                    "score": 9.0,
+                    "thinking": "The notebook provides a good description of the Dandiset. It includes the Dandiset ID (001276), the title (\"NG-CANCAN Remote Targeting Electroporation\"), the purpose of the data (investigating the effect of varying burst numbers in the CANCAN electroporation protocol), the contents (imaging data from cell monolayers), and some key experimental details (electrode array, pulse parameters, protocol structure, imaging modalities). The data organization is also touched upon, explaining that it contains paired DAPI and FITC images reflecting cell nuclei and permeabilized cells. The notebook also acknowledges the creators and funding source. However, the level of detail about metadata fields could be more comprehensive.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook includes the Dandiset ID and title. It describes the experimental setup, the type of data contained within the Dandiset (DAPI and FITC images) and the purpose of the study related to the burst number in the electroporation protocol. The notebook provides a clear overview of the contents and its data structure. Therefore, the notebook contains an comprehensive description of Dandiset contents and structure",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook includes the Dandiset ID (001276), title (\"NG-CANCAN Remote Targeting Electroporation\"), a summary of the experimental design, and details on the data organization within the Dandiset (DAPI and FITC images, file naming conventions). The abstract and summary mention the purpose, contents, investigated parameters, and even acknowledge the creators and funding. Key metadata relating to burst numbers is also retrieved. Therefore, the notebook provides a comprehensive description of the Dandiset, meeting the criteria for a score of 10.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset and displays its name, description, and the total number of assets. It handles potential API errors gracefully, ensuring the notebook doesn't completely fail even if full metadata retrieval is problematic. It doesn't go extremely in depth but the basics are covered. It could go deeper into the metadata fields but the core functionality is present.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully loads the Dandiset using the DANDI API, retrieves basic metadata such as the name, description, and number of assets. The notebook also handles potential API errors gracefully, providing fallback information when necessary. The notebook displays the retrieved information thus showing that it's successfully loaded in. Therefore, the notebook loads and displays basic metadata fields. Also, the notebook accesses and prints the subject of the NWB file.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully connects to the DandiAPIClient, retrieves the dandiset, and displays the dandiset name, description and total number of assets. It attempts to handle API errors gracefully (though some error handling like in cell 6 could be improved). It displays the first 10 assets, showing the filename and download size. The metadata explored is rather limited but present and functional. The notebook does not load *all* key metadata fields, but displays some basic information, thus scoring a 6.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook shows how to connect to the DANDI API, access the Dandiset, and list the available assets. It loads NWB files and extracts some metadata. It also demonstrates loading specific assets using URLs. Thus, it demonstrates loading specific assets, accessing basic metadata but not thoroughly. It does not explore multiple asset types, though it does attempt to load different files from the available names.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully sets up the DANDI API client, retrieves the Dandiset, lists the available assets, and loads specific assets using URLs. It also shows how to access basic asset information like subject ID and session description. Includes some error handling. However, it does not comprehensively explore all asset types or demonstrate deep metadata analysis.\n\nThe notebook successfully connects to the DANDI API, retrieves assets, and loads specific NWB files. It displays basic asset information, demonstrating a functional understanding of asset loading. It attempts to extract burst numbers from descriptions (asset.metadata) which represents using asset metadata. The notebook could showcase more diverse examples. Includes some error handling for API related issues.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates loading assets from the Dandiset. It successfully lists available assets, loads asset information, demonstrates loading specific assets using URLs, and accesses some metadata. However, the notebook does not comprehensively explore multiple asset types or provide thorough usage examples for different asset types beyond image data. The asset loading and metadata access are functional but not exhaustive. There were also issues with directly obtaining asset_ids so urls were used instead to load assets.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully opens the NWB file and explores some basic aspects like device information. It also shows example images that show the results of the experiment. Therefore, it does more than just opening the file, but does not exhaustively explore all NWB data structures.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook attempts to load NWB files using lindi and pynwb. It provides a function `load_nwb_file` that handles retries. The code then selects DAPI and FITC images and proceeds to load them and displays basic information such as Subject ID, Species and Session Description. It also explores the acquisition data and its shape and dtype. However, the notebook relies on direct URL construction and uses hardcoded URLs which limit generalizability. But overall, the structure access is adequate. The notebook accesses and shows basic information and the shape of the image data.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook attempts to load NWB files from the Dandiset using the lindi library and demonstrates accessing basic components such as subject ID, species, and session description. While error handling is included, the loading process sometimes defaults to placeholder data. The notebook also iterates through the acquisition data to show shape and dtype. Given both the successes and the fallbacks, the notebook demonstrates accessing basic components but not a comprehensive exploration. It shows basic NWB file structure.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 6.666666666666667,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains code to load NWB files from the dataset using direct lindi URLs, and attempts to access the image data stored within. It includes error handling for potential loading issues and uses placeholder data when real data loading fails, ensuring the notebook demonstrates functionality even with data access problems. It loads image data and attempts to extract relevant information. However, the notebook also relies heavily on simulated data due to issues with direct NWB file loading, which somewhat diminishes its effectiveness in demonstrating real data access. Also, the notebook only focuses on loading image data and no other data types.\n\nThe notebook shows how to load subject id and session description, indicating the ability to load multiple data elements. However, the reliance on simulated data due to potential loading errors holds it back from achieving an even higher score. The notebook does show how to handle different data types (numerical image arrays and string/text metadata).\n\nTaking into account the notebook's ability to load basic data with error handling, its ability to load multiple data elements, and its handling of different data types, the score is set to 7.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates loading NWB files from the DANDI archive using lindi URLs. It shows how to access the image data stored within the NWB files, handle errors during loading, and even provides placeholder data when real data loading fails. However, the notebook primarily focuses on imaging data and does not explore the full range of potential data types within the NWB file, such as timeseries or other experimental metadata extensively. It could be improved by showing how to access additional metadata or other data types present in a typical electrophysiology NWB file. The loading function has reasonable error handling (retries). The notebook could illustrate more comprehensively how to handle different NWB data types beyond imaging, and demonstrate more advanced data access techniques, even if specific to imaging data representation (e.g., properties associated with the imaging series). It attempts at using file paths but defaults to Lindi URLs which work. However, these attempts could have been improved to make it seamless when Lindi URL is not needed. The demonstration could have been generalized/abstracted, so users can use their own files or a different Dandiset. The notebook uses direct loading from DANDI, which is a plus. The notebook does not show how to download the file for faster repeated access. Some of the paths in the notebook were hardcoded. Simulated data usage is implemented, which is excellent for demonstration of further steps if access to actual data fails. In the context of the question, the notebook can load (but fails to load using paths) and uses a few data elements after loading, and uses simulated ones well. Therefore, a score of 6 is awarded.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook provides a function `load_nwb_file` for loading NWB files from DANDI using lindi URLs. It attempts to load both DAPI and FITC images and extracts image data. It handles potential loading errors by using placeholder data and correctly accesses a specific data element ('SingleTimePointImaging'). It also handles different datatypes appropriately and displays basic file information. Although it doesn't explore all possible data types exhaustively, it covers the essential aspects related to image data in this specific Dandiset and demonstrates appropriate loading, error handling, and data access techniques. Includes several retry attempts, and fallback mechanisms necessary. However, it does rely on hardcoded URLs instead of finding the files, and the file selection process could be improved and there aren't many complex data access techniques. The notebook includes an example of loading and accessing multiple \"assets\", but its primary focus remains on the specific data element, i.e., images from an NWB file.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook makes a reasonable attempt to visualize data from NWB files, but encounters some difficulties in directly accessing and processing the image data. It falls back on placeholder and simulated data when it fails to load real data. The notebook does include the use of matplotlib and shows both single channel images of DAPI and FITC, and overlays these. It further shows downsampled images and intensity profiles. The plots have descriptive titles and colorbars as well, earning an 7.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook loads NWB files from the Dandiset, extracts image data, and displays them. It uses matplotlib for visualization, including single-channel images, overlays, and intensity profiles. The visualizations are labelled and there is also an attempt to compare different burst numbers and a quantification of permeabilization rate with visualization. While there are errors handling and fallbacks to simulated data, the notebook adequately creates clear visualizations with proper labeling. There are also visualisations of the identified nuclei and permeabilized cells. However, publication-quality visualizations are not produced, as there are some areas of improvement possible for improved visual clarity, and improved integration to plot the real data alongside the simulated data, when and if it is available.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook includes several attempts at visualizing the data. It correctly identifies the DAPI and FITC channels and attempts to plot them. It uses real data when available and falls back to simulated data when the real data cannot be loaded. The visualizations include downsampled images, intensity profiles, and overlays of the DAPI and FITC channels. They have titles, axis labels and colorbars. The notebook also contains visualization of the permeabilization analysis showing identified nuclei and comparison bar charts. There is some formatting, but the visualizations aren't especially advanced so I think it lands in the middle. There are multiple visualization types presented including spatial distributions.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 7.666666666666667,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook provides several plots that progressively build on the data. The initial plots visualizing the image data (DAPI and FITC) are readable with basic labels. The spatial distribution plots include intensity profiles, enhancing understanding. The comparison plots of different burst numbers use a shared colormap for accurate comparison. The final section visualizes the permeabilization analysis clearly, including original images, detected nuclei/permeabilized cells, and a bar chart summarizing the counts. While the plots are informative and reasonably well-formatted, they lack the final touches of publication-ready figures.\nSome improvement in color scheme, and the use of subfigure titles could be introduced. Overall though they are pretty good.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook contains several plots, including visualizations of DAPI and FITC channels (both central sections and downsampled full fields), intensity profiles, comparison of permeabilization patterns with different burst numbers, and permeabilization analysis visualizations. The plots have titles, labels, colorbars, and clear formatting. The overlay plots are a nice touch. The plots are well chosen to illustrate the analysis. The spatial distribution analysis includes intensity profiles to give more information. The comparison of different burst numbers uses a shared colormap, which improves the plot quality. The permeabilization analysis includes original images, masked images, and a bar chart.\n\nWhile the plots are generally clear and well-labeled, they are not quite publication-ready. Some minor improvements could be made to axis labels and the color scheme could be slightly improved. Therefore, a score of 8 is appropriate. Because the image loading is sometimes unsuccessful, simulated plots are created and displayed. These plots have generally pleasing aesthetics and informative displays, which contributes towards the plots' overall quality. The analysis of spatial distribution of permeabilization including intensity profiles adds to the quality of the visualization, highlighting the main findings of the experiment and analysis. However, the plots are not perfect so cannot score higher than 8.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook contains multiple plots that try to visualize image data, intensity profiles, and permeabilization analysis results. The plots have titles, axis labels, and legends where appropriate. Colorbars are included for image plots. The plots are generally readable, and the formatting is reasonable although not perfect. The plots are not quite \"publication-ready\" but are more than \"well-formatted,\" I would give it a score of 7.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 7.0,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook contains the following plots:\n1. Visualization of DAPI and FITC images (3 subplots)\n2. Downsampled DAPI and FITC images + intensity profiles (4 subplots)\n3. Comparison of YoPro-1 uptake with different burst numbers (2 subplots)\n4. Permeabilization analysis (6 subplots)\n\nThese plots effectively demonstrate different aspects of the data, using a variety of visualization types including images, intensity profiles, and bar charts. The variety of visualization types and the insights they provide warrant a high score. There are more than eight effective plots, therefore it corresponds to the highest score.",
+                    "repnum": 0
+                },
+                {
+                    "score": 1.0,
+                    "thinking": "The notebook provides a detailed explanation of an experimental protocol but there are no plots. So the score is 1.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "Multiple plots are generated, including visualizations of the DAPI and FITC channels (both central sections and full fields), intensity profiles and comparisons of permeabilization patterns with different burst numbers, and visualizations of the cell counting analysis. The plots display various aspects of the data and employ different visualization types, demonstrating comprehensive coverage of the data analysis performed in the notebook. There are more than eight individually distinct and useful plots.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}

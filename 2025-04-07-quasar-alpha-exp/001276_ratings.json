@@ -1,0 +1,180 @@
+{
+    "scores": [
+        {
+            "name": "describe-dandiset",
+            "version": 1,
+            "score": 9.333333333333334,
+            "reps": [
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a clear and comprehensive description of the Dandiset, including its ID, title, purpose (electroporation experiments on cell monolayers), contents (fluorescence microscopy images), and key metadata (contributors, license). It also describes the data organization (NWB files, image channels). Therefore the notebook provides a clear and detailed description.",
+                    "repnum": 0
+                },
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook provides a clear overview of the Dandiset. It includes the Dandiset ID, title, description, citation, contributors, license, and a listing of assets. The notebook describes the experimental setup, the purpose of the experiment, and the structure of the data. Also a sample file is loaded and information and a crop can be seen. Therefore, it provides a comprehensive description of the Dandiset contents and structure.",
+                    "repnum": 1
+                },
+                {
+                    "score": 10.0,
+                    "thinking": "The notebook provides a comprehensive description of the Dandiset. It includes the Dandiset ID (DANDI:001276), the title (\"NG-CANCAN Remote Targeting Electroporation\"), a description of the experiments conducted, the data included (fluorescence microscopy images of cell monolayers), information on the contributors and license, and details about the data organization (NWB files). It also mentions the purpose of the experiments (optimizing the CANCAN protocol with variations in burst number, targeting cell permeabilization). The \"Dandiset Metadata\" section also contains various key metadata fields. The notebook also details how to access the information using the Dandi API, which gives detail about the structure. The introduction, summary and notes adds further to this description. The notebook provides a detailed explanation of the Dandiset's purpose, content, key metadata and organization, suggesting a strong understanding of the data and its context.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset",
+            "version": 1,
+            "score": 7.333333333333333,
+            "reps": [
+                {
+                    "score": 8.0,
+                    "thinking": "The notebook successfully loads Dandiset metadata using the Dandi API client and displays the Dandiset ID, title, description, contributor information, and a list of assets. It demonstrates how to programmatically access and display several important pieces of Dandiset-level metadata. The code executes without errors and provides clear output. I am rating this an 8, because there are good explanations, reasonable effort in exploring metadata, but could describe the importance of each metadata field (e.g. citation, license) and their relevance to reproductivity or scientific rigor.",
+                    "repnum": 0
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook successfully loads Dandiset information, including title, description, citation, contributors, license, and assets using the DandiAPIClient. It prints some dandiset metadata such as the number of assets. It progresses beyond a basic successful load and displays several key metadata fields in markdown and using code. It lists some, but not all assets in the Dandiset.",
+                    "repnum": 1
+                },
+                {
+                    "score": 7.0,
+                    "thinking": "The notebook demonstrates how to load Dandiset information using the DANDI API client and `lindi`. \nThe code successfully retrieves the Dandiset ID, subject ID, session date, and session description, indicating that the notebook explores several metadata fields.\nBasic but relevant and the code executed correctly. No field descriptions, though.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-dandiset-assets",
+            "version": 1,
+            "score": 4.333333333333333,
+            "reps": [
+                {
+                    "score": 1.0,
+                    "thinking": "The notebook does not demonstrate any code to load assets from the Dandiset directly. It touches on loading pre-existing datasets from other sources and general metadata handling is minimal. Therefore, it lacks the core focus of loading and working with the assets within the Dandiset structure.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook provides code utilizing the DandiAPIClient to retrieve and list assets from the specified Dandiset. The code successfully executes and outputs a list of asset paths, indicating a successful loading and listing process. It also prints the total number of assets. After listing assets by name and count, the notebok proceeds to load one of the assets and read it using pynwb.\n    The notebook does not show how to access asset metadata explicitly using dandi API. However, it shows how to access metadata from the loaded nwb file.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully lists all assets in the Dandiset using the DANDI API client and also demonstrates how to load and display a specific asset. The initial code block loads the Dandiset assets. Later, a subsequent block loads a specific NWB file from a Lindi URL and displays an image crop. Therefore, it demonstrates loading assets.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb",
+            "version": 1,
+            "score": 6.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully connects to a remote NWB file, reads basic metadata (session description, file identifier, subject ID, session date) from the NWB file. It also accesses image data and displays a crop of the fluorescence image. Therefore, the notebook demonstrates accessing basic NWB components. Code executes without errors.",
+                    "repnum": 0
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates how to load an NWB file, accesses basic file metadata like session description, file identifier, subject ID, and session date. It also shows how to access image data and displays a crop of the image. Therefore, it demonstrates accessing basic NWB components.",
+                    "repnum": 1
+                },
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook successfully retrieves the list of assets in the dandiset which contains the NWB files. Then it proceeds to load one of the available NWB files using `lindi` and `pynwb`, and extracts the session description, identifier, and subject ID as basic information. It also accesses the image data and plots a crop of it. Therefore it demonstrates accessing basic NWB components after successfully opening the file.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "load-nwb-data",
+            "version": 1,
+            "score": 5.0,
+            "reps": [
+                {
+                    "score": 6.0,
+                    "thinking": "The notebook demonstrates how to load an NWB file from a remote location using the lindi library and pynwb. It accesses specific data within the file, such as the session description, identifier, subject ID, and session start time. Critically, it loads the image data as a numpy array and displays a cropped section of the image, showing how to visualize the fluorescence data. This covers the basics of loading an NWB file and accessing data. It doesn't deal with multiple data types well, as it sticks with the image data, which is why it's not rated above an 8. The notebook demonstrates basic loading and data array access. It avoids loading the entire potentially very large image. There is no complex data access, nor exploration of complex data structures.",
+                    "repnum": 0
+                },
+                {
+                    "score": 4.0,
+                    "thinking": "The notebook demonstrates loading a specific NWB file from the Dandiset using the Lindi library, accessing metadata, and loading a central crop of the image data. It correctly handles the data shape (2D or 3D) and displays the cropped image. The notebook could be improved by showing how to load different data types besides the image. It only loads one data array from the file.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook successfully loads data from a remote NWB file using the `lindi` library and `pynwb`. It accesses the image data, prints the shape of the data array, and plots a crop of the image. Therefore, the notebook successfully loads and displays data. However, it only focuses on one data type (image) and doesn't comprehensively explore other data types potentially present in the NWB file. It also handles the large image size by cropping, but doesn't demonstrate other advanced loading techniques. Therefore a score of 5 is appropriate.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "visualize-nwb-data",
+            "version": 1,
+            "score": 5.0,
+            "reps": [
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook successfully loads an NWB file from a remote source, reads the image data, crops a section, and displays it using matplotlib. The visualization is simple but functional, with a title, axis labels removed, and tight layout. The notebook also provides basic guidance on exploring other data types. However, it only demonstrates one type of plot (imshow) for one data type, and the formatting is minimal. It would benefit from demonstrating multiple data types (e.g. plotting pixel intensity histograms), more comprehensive labeling, and potentially other visualization techniques to enhance clarity and insights. It falls short of advanced or publication-quality visualizations.",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook provides code to load an NWB file from a remote source and visualize a cropped portion of a fluorescence image. It avoids loading the entire large image. It includes a title, axis labels, and a grayscale colormap. It provides basic guidance on data exploration, so it deserves a score above average in terms of visualization capabilities, falling short of advanced plotting or techniques to reveal more than a glimpse of a single data type in the dataset. The labeling is not optimal (the unit is missing in the title, which makes interpretation tricky). More details could be shown with intensity scale bar or more informative channel names and experiment descriptions. The example explores only one sample file as well. Therefore, this notebook deserves a score of 5.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook successfully loads and visualizes a central crop of one of the large fluorescence microscopy images from an NWB file. The code executed without errors and produced a figure showing the fluorescence data. The plot has a clear title and axis labels are suppressed. The notebook also provides some suggestions for future visualizations. However, it is limited to a single type of visualization from one NWB file. The image quality isn't \"publication-quality\" and the visualization is pretty basic.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quality",
+            "version": 1,
+            "score": 5.0,
+            "reps": [
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains one plot, a 1000x1000 crop of a fluorescence image. The plot has a title and axis labels are turned off, providing a clean visualization. The plot is easily readable but lacks advanced formatting or comprehensive labels, which would be needed for higher quality plot .",
+                    "repnum": 0
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook contains one plot. The plot is readable and has a title, axes are not labeled and the visual presentation is basic, justifying a score of 5.",
+                    "repnum": 1
+                },
+                {
+                    "score": 5.0,
+                    "thinking": "The notebook generates one plot displaying a central crop of the fluorescence image. The plot is readable and includes a title and removes axis labels. While effective, it lacks advanced formatting. Therefore, the quality of the plot is rated as a 5.",
+                    "repnum": 2
+                }
+            ]
+        },
+        {
+            "name": "plot-quantity",
+            "version": 1,
+            "score": 2.0,
+            "reps": [
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook displays only one plot: a central crop of the fluorescence image. This is a single, basic plot.",
+                    "repnum": 0
+                },
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook contains only one plot, which is a basic display of a cropped fluorescence image. The plot reveals some information about the dataset, as it is a visual representation of the microscopy data, but it is still only a \"basic\" plot according to the rubric.",
+                    "repnum": 1
+                },
+                {
+                    "score": 2.0,
+                    "thinking": "The notebook generated a single plot, showing a central crop of a fluorescence image. Therefore, the score should be 2.",
+                    "repnum": 2
+                }
+            ]
+        }
+    ]
+}
